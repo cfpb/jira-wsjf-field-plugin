@@ -59,7 +59,7 @@ public class WSJFField extends CalculatedCFType implements SortableCustomField{
             || o2 == null
             || o3 == null
             || o4 == null) {
-            return -1.0;
+            return -1.00;
         }
 
         Double value1 = Double.parseDouble(o1.toString());
@@ -68,7 +68,7 @@ public class WSJFField extends CalculatedCFType implements SortableCustomField{
         Double value4 = Double.parseDouble(o4.toString());
 
         Double wsjfScore = (value1+value2+value3)/value4;
-        return wsjfScore;
+        return (double) Math.round(wsjfScore * 100) / 100;
     }
 
     @Override
