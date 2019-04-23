@@ -4,7 +4,7 @@ Before the plugin can be installed in the Jira instance, the source code needs t
 
 To update the field references open the WSJFField.java file found in src->main->java->com->as->plugins->customfields->jira->customfields. At the top of the class you will see the following strings declared:
     private String storyPointsId = "customfield_10000";
-    private String costOfDelayId = "customfield_10001";
+    private String timeCriticalityId = "customfield_10001";
     private String riskOpportunityValueId = "customfield_10002";
     private String businessValuePreId = "customfield_10003";
 

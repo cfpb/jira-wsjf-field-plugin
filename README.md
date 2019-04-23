@@ -29,7 +29,7 @@ All four fields need to be either "Number Fields" or "Select List (single choice
     In the case of the select list field all choices must be only numbers.
 The four fields should represent the following inputs:
 -Risk/Opportunity Value
--Cost of Delay
+-Time Criticality Value
 -Business Value
 -A measure of effort such as Story Points
 The ids of the fields need to be mapped in the plugin code per the configuration instructions above.

@@ -19,10 +19,10 @@ import java.util.Map;
 @Scanned
 public class WSJFField extends CalculatedCFType implements SortableCustomField{
     // Set the custom field ids to the strings below
-    private String storyPointsId = "customfield_10000";
-    private String costOfDelayId = "customfield_10001";
-    private String riskOpportunityValueId = "customfield_10002";
-    private String businessValuePreId = "customfield_10003";
+    private String storyPointsId = "customfield_10008";
+    private String timeCriticalityId = "customfield_14515";
+    private String riskOpportunityValueId = "customfield_14512";
+    private String businessValuePreId = "customfield_14503";
 
     @Override
     public Map<String, Object> getVelocityParameters(final Issue issue,
@@ -46,7 +46,7 @@ public class WSJFField extends CalculatedCFType implements SortableCustomField{
     public Object getValueFromIssue(com.atlassian.jira.issue.fields.CustomField field1,com.atlassian.jira.issue.Issue issue1) {
         //MutableIssue issueM = (MutableIssue)issue1;
         CustomFieldManager customFieldManager = ComponentAccessor.getCustomFieldManager();
-        CustomField cf1 = customFieldManager.getCustomFieldObject(costOfDelayId);
+        CustomField cf1 = customFieldManager.getCustomFieldObject(timeCriticalityId);
         CustomField cf2 = customFieldManager.getCustomFieldObject(riskOpportunityValueId);
         CustomField cf3 = customFieldManager.getCustomFieldObject(businessValuePreId);
         CustomField cf4 = customFieldManager.getCustomFieldObject(storyPointsId);
