@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <resource type="i18n" name="i18n" location="jira-wsjf-field"/>
+
+    <web-resource key="jira-wsjf-field-resources" name="jira-wsjf-field Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        <resource type="download" name="jira-wsjf-field.css" location="/css/jira-wsjf-field.css"/>
+        <resource type="download" name="jira-wsjf-field.js" location="/js/jira-wsjf-field.js"/>
+        <resource type="download" name="images/" location="/images"/>
+        <context>jira-wsjf-field</context>
+    </web-resource>
+
+    <customfield-type name="WSJF Score" i18n-name-key="wsjf-field.name" key="wsjf-field" class="com.as.plugins.customfields.jira.customfields.WSJFField">
+        <description key="wsjf-field.description">The WSJF Field Plugin</description>
+        <resource name="view" type="velocity" location="templates/plugins/fields/view/view-basictext.vm"/>
+        <resource name="xml" type="velocity" location="templates/plugins/fields/xml/xml-basictext.vm"/>
+    </customfield-type>
+</atlassian-plugin>
